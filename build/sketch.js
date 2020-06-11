@@ -226,8 +226,7 @@ var data = [
 ];
 function setup() {
     console.log("🚀 - Setup initialized - P5 is running");
-    var canvas = createCanvas(1000, windowHeight);
-    canvas.parent('sketch');
+    windowResized();
     plot = new MatPlot(480, 480, -10, 10, -10, 10, 10, 10);
     msqe = new MatPlot(480, 480, -2, 2, -10, 100, 510, 10);
     trailSqr = new Trail();
@@ -283,7 +282,8 @@ function mouseReleased(event) {
     }
 }
 function windowResized() {
-    createCanvas(windowWidth, windowHeight);
+    var canvas = createCanvas(1000, windowHeight);
+    canvas.parent('sketch');
     console.log("🛸 Window resized");
 }
 //# sourceMappingURL=sketch.js.map

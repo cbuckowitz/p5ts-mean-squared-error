@@ -284,9 +284,7 @@ function setup() {
   console.log("🚀 - Setup initialized - P5 is running");
   // FULLSCREEN CANVAS
   // let canvas = createCanvas(windowWidth, windowHeight);
-  let canvas = createCanvas(1000, windowHeight);
-  canvas.parent('sketch');
-
+  windowResized();
   // SHAPES ARE DRAWN FROM THE CENTER
   // rectMode(CENTER);
 
@@ -395,7 +393,11 @@ function mouseReleased(event?: object): void {
 // p5 WILL AUTO RUN THIS FUNCTION IF THE BROWSER WINDOW SIZE CHANGES
 // @ts-ignore
 function windowResized() {
-  createCanvas(windowWidth, windowHeight);
+  // createCanvas(windowWidth, windowHeight);
+
+  let canvas = createCanvas(1000, windowHeight);
+  canvas.parent('sketch');
+
   console.log("🛸 Window resized");
 }
 
