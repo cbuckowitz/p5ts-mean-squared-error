@@ -283,13 +283,15 @@ let data: [number, number][] = [
 function setup() {
   console.log("🚀 - Setup initialized - P5 is running");
   // FULLSCREEN CANVAS
-  createCanvas(windowWidth, windowHeight);
+  // let canvas = createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(1000, windowHeight);
+  canvas.parent('sketch');
 
   // SHAPES ARE DRAWN FROM THE CENTER
   // rectMode(CENTER);
 
-  plot = new MatPlot(480, 480, -10, 10, -10, 10, 20, 20);
-  msqe = new MatPlot(480, 480, -2, 2, -10, 100, 520, 20);
+  plot = new MatPlot(480, 480, -10, 10, -10, 10, 10, 10);
+  msqe = new MatPlot(480, 480, -2, 2, -10, 100, 510, 10);
   trailSqr = new Trail();
   trailD = new Trail();
   // THIS WILL SET THE FRAMERATE TO 30.
